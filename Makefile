@@ -29,3 +29,7 @@ type-coverage: $(NODE_MODULES)
 .PHONY: typecheck
 typecheck: $(NODE_MODULES)
 	npx tsc
+
+.PHONY: visualize
+visualize: $(NODE_MODULES)
+	node scripts/serve.mjs

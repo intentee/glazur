@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Glazur — radial layout</title>
+        <style>
+            html,
+            body {
+                margin: 0;
+                height: 100%;
+                background: #0f1117;
+            }
+
+            #canvas {
+                display: block;
+                width: 100vw;
+                height: 100vh;
+            }
+
+            .glazur-edge {
+                stroke: #3a4152;
+                stroke-width: 1.5;
+            }
+
+            .glazur-node {
+                fill: #5b8def;
+                opacity: 0.9;
+                rx: 4;
+            }
+
+            .glazur-label {
+                fill: #ffffff;
+                font: 11px sans-serif;
+                text-anchor: middle;
+                dominant-baseline: middle;
+            }
+        </style>
+    </head>
+    <body>
+        <svg id="canvas" xmlns="http://www.w3.org/2000/svg"></svg>
+        <script type="module" src="./main.mjs"></script>
+    </body>
+</html>
