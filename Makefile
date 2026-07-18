@@ -1,14 +1,20 @@
 COVERAGE_DIR := coverage
 NODE_MODULES := node_modules
+SRC_FILES := $(wildcard src/*.mjs)
 TEST_GLOB := tests/**/*.test.mjs
+TYPES_DIR := types
 
 $(NODE_MODULES): package.json package-lock.json
 	npm install
 	touch $(NODE_MODULES)
 
+$(TYPES_DIR): $(SRC_FILES) tsconfig.build.json $(NODE_MODULES)
+	npx tsc --project tsconfig.build.json
+	touch $(TYPES_DIR)
+
 .PHONY: clean
 clean:
-	rm -rf $(COVERAGE_DIR)
+	rm -rf $(COVERAGE_DIR) $(TYPES_DIR)
 
 .PHONY: coverage
 coverage: $(NODE_MODULES)

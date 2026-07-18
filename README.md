@@ -2,6 +2,12 @@
 
 Layouting and tiling engine.
 
+## Installation
+
+```sh
+npm install glazur
+```
+
 ## Radial layout
 
 `RadialLayout` grows a rooted tree outward from its root as an evenly spaced radial burst:
