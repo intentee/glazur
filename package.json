@@ -1,5 +1,5 @@
 {
-  "name": "glazur",
+  "name": "@intentee/glazur",
   "version": "0.1.0",
   "description": "Layouting and tiling engine",
   "files": [
@@ -24,6 +24,9 @@
   },
   "author": "Mateusz Charytoniuk <mateusz@intentee.com>",
   "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "bugs": {
     "url": "https://github.com/intentee/glazur/issues"
   },

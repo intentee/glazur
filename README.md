@@ -5,7 +5,7 @@ Layouting and tiling engine.
 ## Installation
 
 ```sh
-npm install glazur
+npm install @intentee/glazur
 ```
 
 ## Radial layout
@@ -21,7 +21,7 @@ The layout is fully deterministic (identical input always yields identical outpu
 depends only on plain data, so it runs unchanged inside a Web Worker.
 
 ```js
-import { RadialLayout, RadialLayoutOptions } from "glazur";
+import { RadialLayout, RadialLayoutOptions } from "@intentee/glazur";
 
 const { nodes, edges } = new RadialLayout(
     {
@@ -58,7 +58,7 @@ In a clone of this repository, `make visualize` starts a small static server and
 `LayoutScene` — nodes as boxes and edges clipped to the node borders.
 
 ```js
-import { LayoutScene, parseLayout } from "glazur";
+import { LayoutScene, parseLayout } from "@intentee/glazur";
 
 const document = parseLayout(layoutJson); // validate untrusted layout JSON, or a compute() result
 const scene = new LayoutScene(document);
