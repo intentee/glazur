@@ -53,7 +53,7 @@ by exactly one edge, and no cycles. Malformed input fails fast with a specific t
 
 ## Visualization
 
-`make visualize` starts a small static server and prints a URL. Opening it runs the layout
+In a clone of this repository, `make visualize` starts a small static server and prints a URL. Opening it runs the layout
 **inside a Web Worker**, validates the worker's output with `parseLayout`, and renders it with
 `LayoutScene` — nodes as boxes and edges clipped to the node borders.
 
